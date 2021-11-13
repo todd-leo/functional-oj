@@ -6,6 +6,7 @@ import org.scalatest.matchers.should.Matchers
 
 import scala.io.StdIn.{readInt, readLine}
 
+
 /**
  * Problem: Rotate String
  * Difficulty: Easy

@@ -1,5 +1,5 @@
 package com.toddleo.functional.oj
-package HackerRank.Practice.FunctionalProgramming.AdHoc
+package HackerRank.Practice.FunctionalProgramming.Introduction
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
