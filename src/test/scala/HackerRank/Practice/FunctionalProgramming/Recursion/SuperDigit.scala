@@ -15,7 +15,7 @@ class SuperDigit extends AnyFlatSpec with Matchers {
   behavior of "Naive Solution to SuperDigit"
 
   it should "work on simple test cases" in {
-    SuperDigit("148 3", optimize = false) shouldBe 3
+    SuperDigit("148 3", optimize = NoOptimize) shouldBe 3
   }
 
   behavior of "Optimized Solution to SuperDigit"
@@ -35,6 +35,10 @@ class SuperDigit extends AnyFlatSpec with Matchers {
 
 }
 
+sealed trait Optimize
+
+case object NoOptimize extends Optimize
+case object RecursiveOptimize extends Optimize
 
 object SuperDigit {
 
@@ -43,14 +47,14 @@ object SuperDigit {
     println(SuperDigit(scala.io.StdIn.readLine))
   }
 
-  def apply(parameterLine: String, optimize: Boolean = true): Int = {
+  def apply(parameterLine: String, optimize: Optimize = RecursiveOptimize): Int = {
     val parameterList = parameterLine.split(" ")
     val k: String = parameterList.head
     val n: Int = parameterList.last.toInt
 
     optimize match {
-      case true => optimizedSuperDigit(k, n)
-      case false => naiveSuperDigit(List.fill(n)(k).mkString(""))
+      case RecursiveOptimize => optimizedSuperDigit(k, n)
+      case NoOptimize        => naiveSuperDigit(List.fill(n)(k).mkString(""))
     }
 
   }
