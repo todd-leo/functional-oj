@@ -14,7 +14,9 @@ class Lesson3_FrogJmp extends AnyFlatSpec with Matchers {
 }
 
 object Lesson3_FrogJmp {
-  /** 当然不能用 while 循环做了，会超时
+  /**
+   * https://app.codility.com/programmers/lessons/3-time_complexity/frog_jmp/
+   * 当然不能用 while 循环做了，会超时
    * @param x 初始位置
    * @param y 结束位置
    * @param d 步长
