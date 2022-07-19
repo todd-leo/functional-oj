@@ -12,13 +12,13 @@ import org.scalatest.matchers.should.Matchers
  */
 class SuperDigit extends AnyFlatSpec with Matchers {
 
-  behavior of "Naive Solution to SuperDigit"
+  behavior of "Naive Lesson1_BinaryGap to SuperDigit"
 
   it should "work on simple test cases" in {
     SuperDigit("148 3", optimize = NoOptimize) shouldBe 3
   }
 
-  behavior of "Optimized Solution to SuperDigit"
+  behavior of "Optimized Lesson1_BinaryGap to SuperDigit"
 
   it should "work on really test cases of really large numbers" in {
     SuperDigit("7404954009694227446246375747227852213692570890717884174001587537145838723390362624487926131161112710" +
@@ -43,7 +43,7 @@ case object RecursiveOptimize extends Optimize
 object SuperDigit {
 
   def main(args: Array[String]) = {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Lesson1_BinaryGap */
     println(SuperDigit(scala.io.StdIn.readLine))
   }
 

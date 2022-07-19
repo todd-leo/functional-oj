@@ -27,7 +27,7 @@ class StringCompression extends AnyFlatSpec with Matchers {
 object StringCompression {
 
   def main(args: Array[String]) = {
-    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution */
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Lesson1_BinaryGap */
     println(apply(scala.io.StdIn.readLine))
   }
 
