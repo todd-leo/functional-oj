@@ -1,7 +1,7 @@
 package com.toddleo.functional.oj
 package HackerRank.PreperationKits.OneWeek.Day1
 
-import HackerRank.PreperationKits.OneWeek.Day1.Solution.timeConversion
+import HackerRank.PreperationKits.OneWeek.Day1.TimeConversion.timeConversion
 
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
@@ -9,7 +9,7 @@ import org.scalatest.matchers.should.Matchers
 import java.io.PrintWriter
 import scala.io.StdIn
 
-class name extends AnyFlatSpec with Matchers {
+class TimeConversion extends AnyFlatSpec with Matchers {
 
   behavior of "Testing to one possible solution to" + this.getClass.getCanonicalName
 
@@ -19,7 +19,7 @@ class name extends AnyFlatSpec with Matchers {
   }
 }
 
-object Solution {
+object TimeConversion {
 
   /*
    * Complete the 'timeConversion' function below.
@@ -45,7 +45,7 @@ object Solution {
 
     val s = StdIn.readLine
 
-    val result = Solution.timeConversion(s)
+    val result = TimeConversion.timeConversion(s)
 
     printWriter.println(result)
 
