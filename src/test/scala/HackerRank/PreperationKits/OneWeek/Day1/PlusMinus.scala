@@ -1,6 +1,8 @@
 package com.toddleo.functional.oj
 package HackerRank.PreperationKits.OneWeek.Day1
 
+import HackerRank.PreperationKits.OneWeek.Day1.PlusMinus.*
+
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 
@@ -13,27 +15,28 @@ import java.util.concurrent.*
 import java.util.function.*
 import java.util.regex.*
 import java.util.stream.*
+import scala.collection.concurrent.*
 import scala.collection.immutable.*
 import scala.collection.mutable.*
-import scala.collection.concurrent.*
 import scala.concurrent.*
 import scala.io.*
 import scala.math.*
+import scala.reflect.*
 import scala.sys.*
 import scala.util.matching.*
-import scala.reflect.*
 
 class PlusMinus extends AnyFlatSpec with Matchers {
 
   behavior of "Testing to one possible solution to" + this.getClass.getCanonicalName
 
   it should "just pass" in {
-    Result.plusMinus(Array(-4, 3, -9, 0, 4, 1))
+
+    plusMinus(Array(-4, 3, -9, 0, 4, 1))
   }
 
 }
 
-object Result {
+object PlusMinus {
 
   /*
    * Complete the 'plusMinus' function below.
@@ -59,14 +62,12 @@ object Result {
     println(f"$zeros%1.6f")
   }
 
-}
-
-object Solution {
   def main(args: Array[String]): Unit = {
     val n = StdIn.readLine.trim.toInt
 
     val arr = StdIn.readLine.replaceAll("\\s+$", "").split(" ").map(_.trim.toInt)
 
-    Result.plusMinus(arr)
+    plusMinus(arr)
   }
+
 }
