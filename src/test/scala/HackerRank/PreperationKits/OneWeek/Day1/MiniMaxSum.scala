@@ -34,6 +34,8 @@ class MiniMaxSum extends AnyFlatSpec with Matchers {
     miniMaxSum(Array(1, 2, 3, 4, 5)) should contain theSameElementsInOrderAs Seq(10, 14)
     miniMaxSum(Array(254961783L, 604179258L, 462517083L, 967304281L, 860273491L)) should
       contain theSameElementsInOrderAs Seq(2181931615L, 2894274113L)
+    miniMaxSum(Array(256741038L, 623958417L, 467905213L, 714532089L, 938071625L)) should
+      contain theSameElementsInOrderAs Seq(2063136757L, 2744467344L)
 
   }
 
